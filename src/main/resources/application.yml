@@ -1,0 +1,14 @@
+server:
+  port: 8089
+spring:
+  application:
+    name: api-gate
+routes:
+  - id: NoteService
+    uri: http://localhost:8084/
+    predicates:
+  - Path=/notes/**
+#  - id: Microservice2
+#    uri: http://localhost:8085/
+#    predicates:
+#  - Path=/serviceB/**
